@@ -1,0 +1,24 @@
+body{
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+#header {
+    text-align: center;
+    display: flex;
+    width: 80%;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+#headerIcon{
+    padding: 15px;
+    display: flex;
+}
+
+#headerText{
+    font-size: 50px;
+}
