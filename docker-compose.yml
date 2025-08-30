@@ -1,15 +1,13 @@
-version: '3.9'
+version: '3.8'
 
 services:
   app:
-    build:
-      context: ./php
-    container_name: pyrhonLerningApp
+    build: .
+    container_name: pythonLerningApp
+    ports:
+      - "8099:80"
     volumes:
       - ./src:/var/www/html
-    # host : container
-    ports:
-      - "8085:80"
     depends_on:
       - db
 
@@ -18,10 +16,10 @@ services:
     container_name: laravel_db
     restart: always
     environment:
+      MYSQL_ROOT_PASSWORD: 1a24c3de
       MYSQL_DATABASE: laravel
-      MYSQL_USER: laravel
-      MYSQL_PASSWORD: secret
-      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: marimo
+      MYSQL_PASSWORD: 1a24c3de1a24c3de
     ports:
       - "3306:3306"
     volumes:
