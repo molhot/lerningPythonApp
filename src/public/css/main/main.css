@@ -1,0 +1,160 @@
+main {
+    width: 100%;
+}
+
+/* ページ表示部分 */
+
+#pageShowSegment {
+    width: 50%;
+    height: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+
+#pageShowSegmentText {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 40px;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+/* ページ表示部分 */
+
+#courseHistory {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+/* コース履歴　header */
+
+#courseHistoryHeader {
+    display: flex;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.courceHistoryText {
+    font-size: 30px;
+}
+
+/* コース履歴　header */
+
+/* コース情報 */
+.courceInformation {
+    width: 80%;
+    height: 80px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.classNameHeader {
+    height: 50px;
+    width: 25%;
+    font-size: 30px;
+    text-align: center;
+}
+
+.className {
+    height: 50px;
+    width: 25%;
+    text-align: center;
+    font-size: 30px;
+}
+.continue_stop_button {
+    height: 50px;
+    width: 25%;
+}
+
+.continueButton {
+    margin-left: 40%;
+}
+
+.stopButton {
+    margin-left: 40%;
+}
+
+/* コース情報 */
+
+.courceSeparator {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+/* 活動履歴　略歴 */
+#biographyActivity {
+    width: 60%;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+}
+
+#doneCourceHeader {
+    width: 50%;
+    height: 40px;
+    font-size: 30px;
+    text-align: center;
+}
+
+#doneCourceCountComponent {
+    width: 30%;
+    height: 40px;
+    margin-right: 5%;
+    font-size: 30px;
+    text-align: right;
+    display: flex;
+}
+
+#doneCourceIcon {
+    width: 60%;
+    /* margin: 0 0 0 auto; */
+}
+
+#doneCourceCount {
+    text-align: right;
+    width: 60%;
+    /* margin: 0 0 0 auto; */
+}
+
+#doneCourceAfterPrifix {
+    width: 20%;
+    height: 40px;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 30px;
+}
+
+/* 活動履歴　略歴 */
+
+/* カレンダー */
+#monthComponent {
+    width: 30%;
+    height: 50px;
+    padding-top: 15px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 30px;
+}
+
+#calender {
+    width: 100%;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
