@@ -1,0 +1,53 @@
+body{
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+#header {
+    text-align: center;
+    display: flex;
+    width: 80%;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+#headerIcon {
+    padding: 15px;
+    display: flex;
+}
+
+#headerText {
+    font-size: 50px;
+}
+
+#underHeader {
+    width: 80%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+.pageHeaderBar {
+    display: flex;
+    padding: 60px;
+    font-size: 20px;
+}
+
+.barImage{
+    width: 30px;
+    height: 30px;
+    padding-right: 5px;
+}
+
+#separatorLine {
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+}
