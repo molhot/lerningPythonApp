@@ -1,0 +1,78 @@
+
+# ワークフローの名前
+name: Laravel Test By php artisan test
+
+# [GitHub Actions on](https://docs.github.com/ja/actions/writing-workflows/workflow-syntax-for-github-actions#on)参照
+# ワークフローのトリガーを定義
+on:
+
+ # マスターブランチに対してプルリクエスト作成時(ワークフローのトリガー)
+ pull_request:
+  # デフォルトは[opened, reopened, synchronize]、ここではopenedのみを設定
+  types:
+   - opened
+   - reopened
+  branches:
+   - master
+   - 'develop/**'
+
+ # 特定のパスのファイルで変更が行われたブランチがプッシュされた時(ワークフローのトリガー)
+#  push:
+#   paths:
+#    - 'htdocs/app/Helper/ResultHelper.php'
+
+# [Github Actions jobs](https://docs.github.com/ja/actions/writing-workflows/workflow-syntax-for-github-actions#jobs)参照
+# トリガーによって実行されるワークフロー(複数のジョブ可)を定義
+jobs: 
+
+ # "laravel_test"というジョブIDでジョブを定義
+ laravel_test:
+  # "laravel_test"ジョブを実行するOS(ubuntuの最新版)を指定
+  runs-on: ubuntu-latest
+  # 基本はhtdocsディレクトリで各タスクを実行
+  defaults:
+   run:
+    working-directory: htdocs
+
+  # "laravel_test"ジョブで実行されるタスク(複数)を定義
+  steps: 
+   # プルリクを作成したソースブランチ || プッシュされたブランチ にチェックアウト
+   - name: Fetch and checkout source branch of remote repository
+     uses: actions/checkout@v4
+     with:
+      ref: ${{ github.head_ref }}
+      
+   # 以下 php artisan test を実行するための環境構築
+
+   # ジョブ内でphp環境をバージョン指定しセットアップ(バージョンはプロジェクトによって各自設定)
+   - name: Setup php
+     uses: shivammathur/setup-php@v2
+     with:
+      php-version: "7.4"
+      tools: composer:v2
+
+   # 日本語版サイトのテスト用
+   # ここで一度.envをコピーしなければcomposer installに失敗する
+   - name: Copy .env in Japanese locale
+     run: cp .env.example.ja .env
+
+   # composerからライブラリをインストール
+   - name: Install dependencies by composer
+     run: composer install --no-progress --prefer-dist --optimize-autoloader
+
+   # Laravelのアプリケーションキーを作成
+   - name: Generate laravel app key
+     run: php artisan key:generate
+
+   # テスト実行
+   - name: Run test in Japanese locale
+     run: php artisan test
+
+   # 英語版サイトのテスト用
+   - name: Copy .env in English locale
+     run: cp .env.example.en .env
+
+   # テスト実行
+   - name: Run test in English locale
+     run: php artisan test
+
