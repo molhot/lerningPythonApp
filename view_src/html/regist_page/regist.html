@@ -1,0 +1,42 @@
+<head>
+    <link rel="stylesheet" href="../../css/regist_page/regist_page.css">
+</head>
+
+<body>
+    <div id="applicationTitle">
+        python学習アプリ
+    </div>
+
+    <form action="/main" method="post">
+        <div id="registPage">
+            <div class="registArea">
+                <div class="holderArea">ユーザー名</div>
+                <div class="inputArea">
+                    <input type="text" id="username" name="username" placeholder="ユーザー名を入力">
+                </div>
+            </div>
+            <div class="registArea">
+                <div class="holderArea">パスワード</div>
+                <div class="inputArea">
+                    <input type="text" id="password" name="password" placeholder="パスワードを入力">
+                </div>
+            </div>
+        </div>
+
+        <div id="registArea">
+            <div id="registActionButtonArea">
+                <div id="registButton">
+                    <img src="../common/assets/registButton.png">
+                </div>
+                <div id="registTitle">
+                    <button type="button">
+                        登録
+                    </button>
+                </div>
+            </div>
+            <hr>
+        </div>
+    </form>
+
+    <script src="{{ asset('/js/regist/regist.js') }}"></script>
+</body>
