@@ -9,7 +9,7 @@
             python学習アプリ
         </div>
 
-        <form action="{{url('/main')}}" method="post">
+        <form id="registForm" action="{{url('/regist/Action')}}" method="post">
             @csrf
             <div id="registPage">
                 <div class="registArea">

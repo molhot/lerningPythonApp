@@ -26,4 +26,4 @@ Route::get('/regist', function () {
     return view('userAuticate/regist');
 });
 
-Route::get('/regist/Action', [RegistController::class, 'regist']);;
+Route::post('/regist/Action', [RegistController::class, 'regist']);;
