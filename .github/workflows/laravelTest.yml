@@ -12,9 +12,6 @@ on:
   types:
    - opened
    - reopened
-  branches:
-   - master
-   - 'develop/**'
 
  # 特定のパスのファイルで変更が行われたブランチがプッシュされた時(ワークフローのトリガー)
 #  push:
