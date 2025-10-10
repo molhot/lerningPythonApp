@@ -17,6 +17,7 @@ class RegistController extends Controller
         $userName = $request["username"];
         $password = $request["password"];
 
+        Log::debug("request ip is");
         Log::debug(request()->ip());
 
         $user = User::create(
