@@ -12,9 +12,19 @@ class UserLoginController extends Controller
         $emailAddress = $request["emailAddress"];
         $password = $request["password"];
 
-        $getUserDbInfo = User::where('email', $emailAddress)->where('password', $password)->get();
+        \Log::debug("this controller called");
+
+        $getUserDbInfoList = (User::where('email', $emailAddress)->where('password', $password)->get());
+
+        if ($getUserDbInfoList->isEmpty()) {
+            return view('userAuticate/loginmissed');
+        }
+
+        $getUserDbInfo = $getUserDbInfoList[0];
+
+        \Log::debug($getUserDbInfo);
         
-        if ($getUserDbInfo == NULL) {
+        if (empty($getUserDbInfo)) {
             return view('userAuticate/loginmissed');
         }
 

@@ -1,4 +1,4 @@
-@include('/layouts/header')
+@include('/layouts/header/header')
 
 <!-- (layouts/header.php) -->
 <!-- <body> -->
@@ -61,4 +61,7 @@
 <div class="containe">
     @yield('content')
 </div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="{{ asset('/js/login/login.js') }}"></script>
 <!-- </body> -->
