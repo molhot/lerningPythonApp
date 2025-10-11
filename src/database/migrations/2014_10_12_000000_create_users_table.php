@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
-            $table->integer('ip');
+            $table->string('ip', 45)->change();;
             $table->boolean('paid_flg');
         });
     }
