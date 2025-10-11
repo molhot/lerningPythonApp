@@ -24,6 +24,12 @@
                         <input type="text" id="password" name="password" placeholder="パスワードを入力">
                     </div>
                 </div>
+                <div class="registArea">
+                    <div class="holderArea">emailAddress</div>
+                    <div class="inputArea">
+                        <input type="text" id="emailAddress" name="emailAddress" placeholder="メールアドレスを入力">
+                    </div>
+                </div>
             </div>
 
             <div id="registArea">

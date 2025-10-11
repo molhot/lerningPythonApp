@@ -16,6 +16,7 @@ class RegistController extends Controller
     {
         $userName = $request["username"];
         $password = $request["password"];
+        $emailAddress = $request["emailAddress"];
 
         Log::debug("request ip is");
         Log::debug(request()->ip());
@@ -24,7 +25,7 @@ class RegistController extends Controller
             [
                 'name' => $userName,
                 'password' => $password,
-                'email' => "",
+                'email' => $emailAddress,
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
                 'ip' => request()->ip(),
