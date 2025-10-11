@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserAction\RegistController;
+use App\Http\Controllers\UserLoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,4 +27,9 @@ Route::get('/regist', function () {
     return view('userAuticate/regist');
 });
 
-Route::post('/regist/Action', [RegistController::class, 'regist']);;
+Route::post('/regist/Action', [RegistController::class, 'regist']);
+
+Route::post(
+    '/login', 
+    [UserLoginController::class, 'login']
+);

@@ -20,6 +20,11 @@
         <div class="barText">LoginPage</div>
     </div>
 
+    <div class="errorMessage">
+        入力されたメールアドレス、パスワードの組み合わせは存在していません。<br>
+        再度入力をお願いいたします
+    </div>
+
     <form id="loginForm" action="{{url('/login')}}" method="post">
         @csrf
         <div id="loginPage">

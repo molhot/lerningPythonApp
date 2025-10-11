@@ -7,7 +7,7 @@
     
     <body>
         <!-- header -->
-        @include('/common/header/header')
+        @include('/layouts/header')
         <!-- header -->
         <main>
             <div id="pageShowSegment">
