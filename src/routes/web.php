@@ -15,25 +15,30 @@ use App\Http\Controllers\UserLoginController;
 |
 */
 
-Route::post('/main', function () {
-    return view('main/main');
-});
-
-Route::get('/main', function () {
-    return view('main/main');
-});
-
 Route::get('/regist', function () {
     return view('userAuticate/regist');
 });
 
-Route::post('/regist/Action', [RegistController::class, 'regist']);
+Route::post(
+    '/regist/Action', 
+    [RegistController::class, 'regist']
+);
 
-Route::get('/login', function () {
+Route::get('login', function () {
     return view('userAuticate/login');
-});
+})->name('login');;
 
 Route::post(
-    '/login', 
+    'login', 
     [UserLoginController::class, 'login']
 );
+
+Route::middleware('auth')->group(function () {
+    Route::post('/main', function () {
+        return view('main/main');
+    });
+
+    Route::get('/main', function () {
+        return view('main/main');
+    });
+});

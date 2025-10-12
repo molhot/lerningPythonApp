@@ -14,20 +14,22 @@ class UserLoginController extends Controller
 
         \Log::debug("this controller called");
 
-        $getUserDbInfoList = (User::where('email', $emailAddress)->where('password', $password)->get());
+        $userDbInfoList = (User::where('email', $emailAddress)->where('password', $password)->get());
 
-        if ($getUserDbInfoList->isEmpty()) {
+        if ($userDbInfoList->isEmpty()) {
             return view('userAuticate/loginmissed');
         }
 
-        $getUserDbInfo = $getUserDbInfoList[0];
+        $userDbInfo = $userDbInfoList[0];
 
-        \Log::debug($getUserDbInfo);
+        \Log::debug($userDbInfo);
         
-        if (empty($getUserDbInfo)) {
+        if (empty($userDbInfo)) {
             return view('userAuticate/loginmissed');
         }
 
-        return view('main.main')->with('userDbInfo', $getUserDbInfo);
+        Auth::login($userDbInfo);
+
+        return view('main.main')->with('userDbInfo', $userDbInfo);
     }
 }
