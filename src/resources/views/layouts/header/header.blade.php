@@ -12,6 +12,7 @@
     </div>
 </header>
 
+@if (empty($noExistUnderHeader))
 <div id="underHeader">
     <div class="pageHeaderBar">
         <img class="barImage" src="{{ asset('/images/barImage.png') }}">
@@ -34,12 +35,13 @@
         <div class="barText">有料版</div>
     </div>
 </div>
+@endif
 
 <div id="separatorLine">
     <hr>
 </div>
 
-<div class="containe">
+<div class="container">
     @yield('content')
 </div>
 <!-- </body> -->
