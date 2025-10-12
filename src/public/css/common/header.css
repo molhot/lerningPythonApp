@@ -15,12 +15,15 @@ body{
 }
 
 #headerIcon {
-    padding: 15px;
+    padding-right: 15px;
+    padding-left: 15px;
     display: flex;
+    width: 40%;
 }
 
 #headerText {
     font-size: 50px;
+    font-size: 5cqw;
 }
 
 #underHeader {

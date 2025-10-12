@@ -1,0 +1,52 @@
+#loginFormContainer {
+    width: 100%;
+    height: 100%;
+}
+
+#loginPage {
+    width: 100%;
+    height: 100%;
+}
+
+.loginArea {
+    display: flex;
+    width: 100%;
+}
+
+.loginAreaHolder {
+    text-align: center;
+    width: 50%;
+}
+
+.inputArea {
+    width: 50%;
+}
+
+#loginArea {
+    width: 100%;
+    height: 100%;
+}
+
+#loginActionButtonArea {
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+}
+
+#loginActionButtonArea {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#contentSeparator {
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
