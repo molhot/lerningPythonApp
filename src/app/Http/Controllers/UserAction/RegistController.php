@@ -14,12 +14,14 @@ class RegistController extends Controller
 
     public function regist(Request $request)
     {
-        $userName = $request["username"];
+        $userName = "username_test"; //後で変更
+        $emailAddress = $request["mailaddress"];
         $password = $request["password"];
-        $emailAddress = $request["emailAddress"];
 
         Log::debug("request ip is");
         Log::debug(request()->ip());
+        \Log::debug("password");
+        \Log::debug($password);
 
         $user = User::create(
             [
@@ -33,7 +35,9 @@ class RegistController extends Controller
             ]
         );
 
+        Log::debug("いいいいい");
+
         // 登録後にリダイレクト
-        return redirect('/main');
+        return redirect('login');
     }
 }

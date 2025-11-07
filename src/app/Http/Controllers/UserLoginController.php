@@ -4,20 +4,25 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class UserLoginController extends Controller
 {
     public function login(Request $request)
     {
-        $emailAddress = $request["emailAddress"];
+        \Log::debug($request);
+        $emailAddress = $request["mailaddress"];
         $password = $request["password"];
-
-        \Log::debug("this controller called");
-
-        $userDbInfoList = (User::where('email', $emailAddress)->where('password', $password)->get());
+        $userDbInfoList = User::where('email', $emailAddress)->get();
+        \Log::debug("user db info");
+        \Log::debug($userDbInfoList);
 
         if ($userDbInfoList->isEmpty()) {
-            return view('userAuticate/loginmissed');
+            return view('userAuticate/login', 
+                [
+                    'isLoginFailed' => true,
+                ]
+            );
         }
 
         $userDbInfo = $userDbInfoList[0];

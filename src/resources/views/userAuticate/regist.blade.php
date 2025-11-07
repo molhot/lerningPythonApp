@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <title>@yield('title', 'My Site')</title>
-    <link rel="stylesheet" href="{{ asset('css/login/login.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/regist/regist.css') }}">
 </head>
 <body>
     <main>
@@ -14,7 +14,8 @@
             <div class = "headerText">ユーザー登録</div>
         </div>
 
-        <div class = "loginFormArea">
+        <form action="/regist/Action" method="post" class = "loginFormArea" id = "registForm">
+            @csrf
             <div class = "FormAll mailForm">
                 <div class = "formHeader">メールアドレス</div>
                 <input class = "inputArea" name = "mailaddress">
@@ -24,13 +25,14 @@
                 <div class = "formHeader">パスワード</div>
                 <input class = "inputArea" name = "password">
             </div>
-        </div>
+        </form>
 
-        <div class = "loginButton" id = "loginButton">
+        <div class = "registButton" id = "registButton">
             <p>登録</p>
         </div>
     </main>
 
-    <script src="{{ asset('js/global.js') }}"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="{{ asset('js/regist/regist.js') }}"></script>
 </body>
 </html>

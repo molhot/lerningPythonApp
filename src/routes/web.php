@@ -26,19 +26,15 @@ Route::post(
 
 Route::get('login', function () {
     return view('userAuticate/login');
-})->name('login');;
+})->name('login');
 
 Route::post(
     'login', 
     [UserLoginController::class, 'login']
 );
 
-// Route::middleware('auth')->group(function () {
-    Route::post('/main', function () {
-        return view('main/main');
-    });
-
+Route::middleware('auth')->group(function () {
     Route::get('/main', function () {
         return view('main/main');
     });
-// });
+});

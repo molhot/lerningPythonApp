@@ -14,7 +14,14 @@
             <div class = "headerText">ログインページ</div>
         </div>
 
-        <div class = "loginFormArea">
+        @if (isset($isLoginFailed))
+        <div class = "loginMissedMessage">
+            ログインに失敗しました、再度アカウントの確認をお願いします
+        </div>
+        @endif
+
+        <form action="login" method="post" class = "loginFormArea" id = "loginFormArea">
+            @csrf
             <div class = "FormAll mailForm">
                 <div class = "formHeader">メールアドレス</div>
                 <input class = "inputArea" name = "mailaddress">
@@ -24,13 +31,15 @@
                 <div class = "formHeader">パスワード</div>
                 <input class = "inputArea" name = "password">
             </div>
-        </div>
+        </form>
 
         <div class = "loginButton" id = "loginButton">
             <p>ログイン</p>
         </div>
     </main>
 
-    <script src="{{ asset('js/global.js') }}"></script>
+    {{-- <script src="{{ asset('js/global.js') }}"></script> --}}
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="{{ asset('js/login/login.js') }}"></script>
 </body>
 </html>

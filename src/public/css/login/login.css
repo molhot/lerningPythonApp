@@ -1,3 +1,8 @@
+body {
+    width: 100%;
+    background-image: url("../../images/backGroundImage.png");
+}
+
 main {
     width: 100%;
     height: auto;
@@ -25,6 +30,8 @@ main {
 }
 
 .loginFormArea {
+    background-color: white;
+
     width: 60%;
     height: auto;
     margin-left: auto;
@@ -37,7 +44,9 @@ main {
 .FormAll {
     width: 100%;
     padding-bottom: 4vmin;
-    padding-top: 3vmin;
+    padding-top: 4vmin;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .formHeader {
@@ -46,7 +55,7 @@ main {
 }
 
 .inputArea {
-    width: 80%;
+    width: 90%;
     border: 0.5px solid black;
     border-radius: 15px;
     height: 4vmin;
@@ -54,9 +63,16 @@ main {
     margin-left: 3%;
 }
 
+.inputArea:hover {
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
 .loginButton {
+    background-color: white;
+
     width: 30%;
-    margin-top: 5%;
+    margin-top: 4%;
     margin-left: auto;
     margin-right: auto;
     height: 4vmin;
@@ -68,4 +84,9 @@ main {
     align-items: center;          /* 縦方向の中央寄せ */
     justify-content: center;      /* 横方向の中央寄せ */
     font-size: 3vmin;
+}
+
+.loginButton:hover {
+    background-color: #f0f0f0; /* 例: 少しグレーに */
+    cursor: pointer;
 }

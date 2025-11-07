@@ -1,7 +1,8 @@
 $(function () {
     console.log("hi");
 
-    $("#loginTitle").on("click", function () {
-        $("#loginForm").submit();
+    $("#loginButton").on("click", function () {
+        console.log("login");
+        $("#loginFormArea").submit();
     });
 })
