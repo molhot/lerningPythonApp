@@ -1,0 +1,77 @@
+main {
+    width: 100%;
+    height: auto;
+}
+
+.header {
+    display: flex;
+    width: 50%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10vmin;
+}
+
+.icon {
+    width: 10vmin;
+    height: 10vmin;
+    background-color: #4dabf7;
+}
+
+.headerText {
+    width: 70%;
+    font-size: 4vw;
+    margin-left: 5%;
+
+    text-align: center;
+    display: flex;                /* フレックスボックスにする */
+    align-items: center;          /* 縦方向の中央寄せ */
+    justify-content: center;      /* 横方向の中央寄せ */
+    font-size: 3vmin;
+}
+
+.loginFormArea {
+    width: 60%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3%;
+    border: 0.1px solid black;
+    border-radius: 15px;
+}
+
+.FormAll {
+    width: 100%;
+    padding-bottom: 4vmin;
+    padding-top: 3vmin;
+}
+
+.formHeader {
+    font-size: 2vmin;
+    margin-left: 3%;
+}
+
+.inputArea {
+    width: 80%;
+    border: 0.5px solid black;
+    border-radius: 15px;
+    height: 4vmin;
+    margin-top: 0.5vmin;
+    margin-left: 3%;
+}
+
+.loginButton {
+    width: 30%;
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 4vmin;
+    border: 0.5px solid black;
+    border-radius: 15px;
+    
+    text-align: center;
+    display: flex;                /* フレックスボックスにする */
+    align-items: center;          /* 縦方向の中央寄せ */
+    justify-content: center;      /* 横方向の中央寄せ */
+    font-size: 3vmin;
+}

@@ -1,0 +1,75 @@
+.content {
+    width: 100%;
+    height: 100%;
+}
+
+.courseExplainElementParent {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.courseExplainElement {
+    width: 100%;
+    display: flex;
+    height: 100%;
+}
+
+.explainElementIcon {
+    width: 7vmin;
+    height: 7vmin;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.courseProgressExplainElement {
+    width: 70%;
+    background-color: aquamarine;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.courseName {
+    width: 85%;
+    background-color: bisque;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.courseProgressBar {
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.continueOrEndButton {
+    width: 20%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.continueButton {
+    margin-left: 3%;
+}
+
+.endButton {
+    margin-left: 3%;
+}
+
+.allRecordArea {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.detailRecordArea {
+    display: flex;
+}
+
+.shortHistory {
+    width: 45%;
+}
+
+.montryActiveHistory {
+    width: 45%;
+}

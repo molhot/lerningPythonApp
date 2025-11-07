@@ -33,7 +33,7 @@ Route::post(
     [UserLoginController::class, 'login']
 );
 
-Route::middleware('auth')->group(function () {
+// Route::middleware('auth')->group(function () {
     Route::post('/main', function () {
         return view('main/main');
     });
@@ -41,4 +41,4 @@ Route::middleware('auth')->group(function () {
     Route::get('/main', function () {
         return view('main/main');
     });
-});
+// });

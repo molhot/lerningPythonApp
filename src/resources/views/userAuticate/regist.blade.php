@@ -1,52 +1,36 @@
-<!DOCTYPE html>
-<html lang="japanese">
-    <head>
-        <link href="{{ asset('/css/common/registpage.css') }}" rel="stylesheet"  type="text/css"  media="all">
-    </head>
+{{-- loginページに関しては独立したページとして作成 --}}
 
-    <body>
-        <div id="applicationTitle">
-            python学習アプリ
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>@yield('title', 'My Site')</title>
+    <link rel="stylesheet" href="{{ asset('css/login/login.css') }}">
+</head>
+<body>
+    <main>
+        <div class = "header">
+            <div class = "icon">icon</div>
+            <div class = "headerText">ユーザー登録</div>
         </div>
 
-        <form id="registForm" action="{{url('/regist/Action')}}" method="post">
-            @csrf
-            <div id="registPage">
-                <div class="registArea">
-                    <div class="holderArea">ユーザー名</div>
-                    <div class="inputArea">
-                        <input type="text" id="username" name="username" placeholder="ユーザー名を入力">
-                    </div>
-                </div>
-                <div class="registArea">
-                    <div class="holderArea">パスワード</div>
-                    <div class="inputArea">
-                        <input type="text" id="password" name="password" placeholder="パスワードを入力">
-                    </div>
-                </div>
-                <div class="registArea">
-                    <div class="holderArea">emailAddress</div>
-                    <div class="inputArea">
-                        <input type="text" id="emailAddress" name="emailAddress" placeholder="メールアドレスを入力">
-                    </div>
-                </div>
+        <div class = "loginFormArea">
+            <div class = "FormAll mailForm">
+                <div class = "formHeader">メールアドレス</div>
+                <input class = "inputArea" name = "mailaddress">
             </div>
 
-            <div id="registArea">
-                <div id="registActionButtonArea">
-                    <div id="registButton">
-                        <img src="../common/assets/registButton.png">
-                    </div>
-                    <div id="registTitle">
-                        <button type="button">
-                            登録
-                        </button>
-                    </div>
-                </div>
-                <hr>
+            <div class = "FormAll passwordForm">
+                <div class = "formHeader">パスワード</div>
+                <input class = "inputArea" name = "password">
             </div>
-        </form>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="{{ asset('/js/regist/regist.js') }}"></script>
-    </body>
+        </div>
+
+        <div class = "loginButton" id = "loginButton">
+            <p>登録</p>
+        </div>
+    </main>
+
+    <script src="{{ asset('js/global.js') }}"></script>
+</body>
 </html>
